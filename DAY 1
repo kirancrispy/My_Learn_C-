@@ -1,0 +1,167 @@
+C++ is a cross-platform, high-performance language created by Bjarne Stroustrup as a C extension. 
+It offers extensive control over system resources and memory.
+Major updates include C++11, C++14, C++17, and C++20
+
+In this field we are using c++ right now
+*Software Development: C++ is extensively used in software development for applications ranging from desktop software to operating systems.
+*Game Development: Many game engines and AAA games are built using C++ due to its high performance and control over hardware resources.
+*System Programming: C++ is commonly used for system-level programming tasks such as developing device drivers, network protocols, and operating systems components.
+*Embedded Systems: C++ is popular in embedded systems programming due to its efficiency and ability to directly interact with hardware.
+*Financial Software: C++ is used in the development of financial software for tasks such as algorithmic trading, risk management, and high-frequency trading systems.
+*Scientific Computing: C++ is used in scientific computing applications such as simulations, computational modeling, and data analysis due to its performance capabilities.
+*Graphics and Multimedia: C++ is employed in the development of graphics engines, multimedia applications, and graphical user interfaces (GUIs) due to its efficiency and compatibility with graphics libraries like OpenGL and DirectX.
+*Artificial Intelligence and Machine Learning: C++ is utilized in AI and machine learning applications, especially in performance-critical tasks where efficiency is crucial.
+*Web Browsers: Components of web browsers, particularly rendering engines and JavaScript interpreters, are often written in C++ for their performance requirements.
+*Operating Systems Development: C++ is used in the development of operating systems due to its low-level capabilities and control over system resources.
+
+Why it is
+Versatile Presence: C++ is widely used across operating systems, GUIs, and embedded systems.
+Structured Efficiency: With its object-oriented nature, C++ provides clear program structure, fostering code reuse and cost-effective development.
+Platform Flexibility: Its portability enables the creation of adaptable applications for various platforms.
+Enjoyable Learning Curve: Many find C++ fun and accessible to learn.
+Smooth Transition: Its close relationship with C, C#, and Java facilitates seamless switching between languages for programmers.
+
+Engin started Right now Hurry up dude -
+To start using C++, you need two things: A text editor, like Notepad, to write C++ code
+A compiler, like GCC, to translate the C++ code into a language that the computer will understand
+Otherwise you can use Online c++ compiler for basic practice i suggest goto IDE
+
+C++ Quickstart
+Let's create our first C++ file.
+Open Codeblocks and go to File > New > Empty File.
+Write the following C++ code and save the file as myfirstprogram.cpp (File > Save File as).
+
+
+myfirstpro1.cpp- 
+#include <iostream>
+using namespace std;
+int main() {
+  cout << "Hello World!";
+  return 0;
+}
+
+Don't worry u ll learn about this in detaile later. and execute this program you ll get  out put "Hello World!" right hahaaa lets drink 1 glass off water dea and lets start.
+what i am doing here, Try it Yourself use tool, i will make it easier for you to understand every part as we move forward.
+
+lets jump to syntax part
+In program see first Line:    #include <iostream>: Imports the input-output stream library, enabling the use of objects like cout for output.
+In second Line:               using namespace std: Grants access to the standard library's objects and variables with shorter syntax.
+Don't worry if you don't understand These lines are typically included in C++ programs for basic input and output operations.
+Line 3: A blank line. C++ ignores white space. But we use it to make the code more readable.
+Line 4: Another thing that always appear in a C++ program is int main(). This is called a function. Any code inside its curly brackets {} will be executed.
+Line 5: cout (pronounced "see-out") is an object used together with the insertion operator (<<) to output/print text. In our example, it will output "Hello World!".
+Note: Every C++ statement ends with a semicolon ;.
+Note: The body of int main() could also been written as:
+int main () { cout << "Hello World! "; return 0; }
+Remember: The compiler ignores white spaces. However, multiple lines makes the code more readable.
+Line 6: return 0 ends the main function.
+Line 7: Do not forget to add the closing curly bracket } to actually end the main function.
+Some C++ programs may omit "using namespace std" and instead use the "std::" prefix for certain objects.
+#include <iostream>
+
+int main() {
+  std::cout << "Hello World!";     //wher used std:: where :: it is  scope operator
+  return 0;
+}
+                                 //It is up to you if you want to include the standard namespace library or not.
+
+lets start Out put :-
+output is typically done using the cout object from the <iostream> library
+
+lets see example :- 
+
+#include <iostream>
+using namespace std;
+int main() {
+  cout << "Hello Dea Students";
+  return 0;
+}
+
+guess what is output for this program....... the output is :- " Hello Dea Students " 
+You can add as many cout objects as you want. However, note that it does not insert a new line at the end of the output
+
+Another example for u Dea:- 
+
+                              #include <iostream>
+                              using namespace std;
+                              int main() {
+                              cout << "Hello";
+                              cout << "I am learning C++";
+                              return 0;
+                              }
+                                    output is: Hello
+                                               I am learning C++
+and next move on to next
+New Lines:-To insert a new line, you can use the \n character
+lets see Example
+
+#include <iostream>
+using namespace std;
+int main() {
+  cout << "Hello World! \n\n";
+  cout << "I am learning C++";
+  return 0;
+}
+output: Hello World!
+                              // where its giving two line space 
+        I am learning C++
+
+Another way to insert a new line, is with the endl manipulator:
+Example
+#include <iostream>
+using namespace std;
+int main() {
+  cout << "Hello World!" << endl;
+  cout << "I am learning C++";
+  return 0;
+}
+output:- Hello World!
+         I am learning C++
+
+Both \n and endl are used to break lines. However, \n is most used.
+But what is \n exactly?
+The newline character (\n) is called an escape sequence, and it
+forces the cursor to change its position to the beginning of the next line on the screen. This results in a new line.
+\t	Creates a horizontal tab	
+\\	Inserts a backslash character (\)	
+\"	Inserts a double quote character
+use these all in program 
+
+Lets see C++ Comments:-
+Comments can be used to explain C++ code, and to make it more readable.
+It can also be used to prevent execution when testing alternative code.
+Comments can be singled-lined or multi-lined.
+
+Lets see Single-line Comments
+Single-line comments start with two forward slashes (//).
+Any text between // and the end of the line is ignored by the compiler (will not be executed).
+This example uses a single-line comment before a line of code
+
+ex:- // This is a comment
+       cout << "Hello World!";
+       which program not executing the comment line i.ecomment line specification.
+
+This example uses a single-line comment at the end of a line of code:= 
+cout << "Hello World!"; // This is a comment
+
+C++ Multi-line Comments
+Multi-line comments start with /* and ends with */.
+Any text between /* and */ will be ignored by the compiler:
+Example
+/* The code below will print the words Hello World!
+to the screen, and it is amazing */
+cout << "Hello World!";
+
+i thought you are getting some quations Why Single or multi-line comments?
+If we use in the middele of the program becuse want to undrustand program or want ell something for developer like that and if we usei thought we can undrustand esyly
+It is up to you which you want to use. Normally, we use // for short comments, and /* */ for longer.
+
+K just practice this all today with more example create your own and practice lets see Tomorrow bye .
+
+
+
+
+
+
+
+
