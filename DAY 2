@@ -1,0 +1,331 @@
+C++ Variables
+Variables are containers for storing data values.
+In C++, there are different types of variables (defined with different keywords), for example:
+int - stores integers (whole numbers), without decimals, such as 123 or -123
+double - stores floating point numbers, with decimals, such as 19.99 or -19.99
+char - stores single characters, such as 'a' or 'B'. Char values are surrounded by single quotes
+string - stores text, such as "Hello World". String values are surrounded by double quotes
+bool - stores values with two states: true or false
+Declaring (Creating) Variables To create a variable, specify the type and assign it a value:
+
+Syntax
+type variableName = value;
+
+example:
+#include <iostream>
+using namespace std;
+
+int main() {
+  int myNum = 90;
+  cout << myNum;
+  return 0;
+}
+                              output is 90
+
+Other Types
+Example
+int myNum = 9;                // Integer (whole number without decimals)
+double myFloatNum = 9.29;     // Floating point number (with decimals)
+char myLetter = 'C';          // Character
+string myText = "You";        // String (text)
+bool myBoolean = false;       // Boolean (true or false)
+
+Display Variables
+The cout object is used together with the << operator to display variables.
+To combine both text and a variable, separate them with the << operator:
+Example
+#include <iostream>
+using namespace std;
+int main() {
+  int myMotherAge = 45;
+  cout << "my mother is." << myMotherAge << " years old.";
+  return 0;
+}
+output is: my mother is. 45 years old.
+
+Add Variables Together
+To add a variable to another variable, you can use the + operator
+
+#include <iostream>
+using namespace std;
+int main() {
+  int a = 5;
+  int b = 6;
+  int sum = a + b ;
+  cout << sum;
+  return 0;
+}
+output is 11.
+
+lets drink one glass of water right now it ll make feel free.
+
+Declare Many Variables
+To declare more than one variable of the same type, use a comma-separated list:
+
+Example
+
+#include <iostream>
+using namespace std;
+int main() {
+  int x = 2, y = 4, z = 6;  
+  cout << x + y + z;
+  return 0;
+}
+
+output is 12
+
+One Value to Multiple Variables You can also assign the same value to multiple variables in one line
+
+example 
+
+#include <iostream>
+using namespace std;
+
+int main() {
+  int x, y, z;
+  x = y = z = 100;
+  cout << x + y + z;
+  return 0;
+}
+
+output is 300
+
+Identifiers
+All C++ variables must be identified with unique names. These unique names are called identifiers.
+Identifiers can be short names (like x and y) or more descriptive names (age, sum, totalVolume).
+Note: It is recommended to use descriptive names in order to create understandable and maintainable code:
+
+example
+
+#include <iostream>
+using namespace std;
+int main() {                                   // Good variable name
+  int minutesPerHour = 60;                    // OK, but not so easy to understand what m actually is
+  int m = 60;
+  cout << minutesPerHour << "\n";
+  cout << m;
+  return 0;
+}
+
+output is 60
+           60
+
+The general rules for naming variables are:
+Names can contain letters, digits and underscores
+Names must begin with a letter or an underscore (_)
+Names are case-sensitive (myVar and myvar are different variables)
+Names cannot contain whitespaces or special characters like !, #, %, etc.
+Reserved words (like C++ keywords, such as int) cannot be used as names
+
+Constants: the const keyword this will declare the variable as "constant", which means unchangeable and read-only
+example
+#include <iostream>
+using namespace std;
+int main() {
+  const int minutesPerHour = 60;
+  const float PI = 3.14;
+  cout << minutesPerHour << "\n";
+  cout << PI;
+  return 0;
+}
+output is 60
+          3.14
+
+*When you declare a constant variable, it must be assigned with a value:
+like this const int minutesPerHour = 60;
+
+This however, will not work:
+const int minutesPerHour;
+minutesPerHour = 60; // error
+
+C++ User Input
+You have already learned that cout is used to output (print) values. Now we will use cin to get user input.
+cin is a predefined variable that reads data from the keyboard with the extraction operator (>>).
+In the following example, the user can input a number, which is stored in the variable x. Then we print the value of x:
+example:
+
+#include <iostream>
+using namespace std;
+int main() {
+  string x;
+  cout << "May i know your name: "; // Type a number and press enter
+  cin >> x; // Get user input from the keyboard
+  cout << "Your name is : " << x;
+  return 0;
+}
+output:- May i know your name: Crispy
+         Your name is : Crispy
+
+cout is pronounced "see-out". Used for output, and uses the insertion operator (<<)
+cin is pronounced "see-in". Used for input, and uses the extraction operator (>>)
+
+Creating a Simple Calculator In this example, the user must input two numbers. Then we print the sum by calculating (adding) the two numbers:
+
+#include <iostream>
+using namespace std;
+int main() {
+  int x, y;
+  int sum;
+  cout << "Type a number: ";
+  cin >> x;
+  cout << "Type another number: ";
+  cin >> y;
+  sum = x + y;
+  cout << "Sum is: " << sum;
+  return 0;
+}
+
+output is :-
+Type a number: 2 
+Type another number: 2
+Sum is: 4
+
+C++ Data Types
+As explained in the Variables chapter, a variable in C++ must be a specified data type:
+Example
+int myNum = 9;               // Integer (whole number)
+float myFloatNum = 7.9;     // Floating point number
+double myDoubleNum = 2.98;   // Floating point number
+char myLetter = 'K';         // Character
+bool myBoolean = true;       // Boolean
+string myText = "INDIA";     // String
+
+Basic Data Types
+The data type specifies the size and type of information the variable will store:
+Data Type	Size	Description
+boolean	1 byte	Stores true or false values
+char	1 byte	Stores a single character/letter/number, or ASCII values
+int	2 or 4 bytes	Stores whole numbers, without decimals
+float	4 bytes	Stores fractional numbers, containing one or more decimals. Sufficient for storing 6-7 decimal digits
+double	8 bytes	Stores fractional numbers, containing one or more decimals. Sufficient for storing 15 decimal digits
+Numeric Types
+Use int when you need to store a whole number without decimals, 
+like 35 or 1000, and float or double when you need a floating point number (with decimals), like 9.99 or 3.14515.
+
+int
+#include <iostream>
+using namespace std;
+ int main () {
+  int myNum = 1000;
+  cout << myNum;
+  return 0;
+}
+
+output:- 1000
+
+float
+#include <iostream>
+using namespace std;
+ int main () {
+  float myNum = 5.75;
+  cout << myNum;
+  return 0;
+}
+output :- 5.75
+
+#include <iostream>
+using namespace std;
+ int main () {
+  double myNum = 19.99;
+  cout << myNum;
+  return 0;
+}
+output:- 19.99
+
+float vs. double
+The precision of a floating point value indicates how many digits the value can have after the decimal point.
+The precision of float is only six or seven decimal digits,while double variables have a precision of about 15 digits.
+Therefore it is safer to use double for most calculations
+
+Scientific Numbers
+A floating point number can also be a scientific number with an "e" to indicate the power of 10:
+
+example:- 
+#include <iostream>
+using namespace std;
+ 
+int main () {
+  float f1 = 35e3;
+  double d1 = 12E4;
+  cout << f1 << "\n";
+  cout << d1;
+  return 0;
+}
+output:- 
+35000
+120000
+
+Boolean Types
+A boolean data type is declared with the bool keyword and can only take the values true or false.
+When the value is returned, true = 1 and false = 0.
+
+Example
+#include <iostream>
+using namespace std;
+
+int main() {
+  bool isDancingFun = true;
+  bool isDrinkareGoodforHealth = false;
+  cout << isDancingFun << "\n";
+  cout << isDrinkareGoodforHealt;
+  return 0;
+}
+output :- true
+          false
+
+
+Character Types
+The char data type is used to store a single character. The character must be surrounded by single quotes, like 'A' or 'c':
+
+#include <iostream>
+using namespace std;
+ int main () {
+  char myGrade = 'A';
+  cout << myGrade;
+  return 0;
+}
+output :- A
+
+example:
+#include <iostream>
+using namespace std;
+ int main () {
+  char a = 65, b = 66, c = 67;
+  cout << a;
+  cout << b;
+  cout << c;
+  return 0;
+}
+output:- ABC
+
+String Types
+The string type is used to store a sequence of characters (text). 
+This is not a built-in type, but it behaves like one in its most basic usage. 
+String values must be surrounded by double quotes:
+
+Example
+To use strings, you must include an additional header file in the source code, the <string> library
+
+#include <iostream>
+#include <string>
+using namespace std;
+int main() {
+  string gem = "tree";
+  cout << gem;
+  return 0;
+}
+out put is : tree
+
+peractice well next is operator tomorrow ll continue
+
+
+
+
+
+
+
+
+
+
+
+
